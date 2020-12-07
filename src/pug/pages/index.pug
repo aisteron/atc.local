@@ -1,0 +1,21 @@
+extends ../layout/index
+
+block variables
+  - var title = 'Главная';
+  - var description = 'Description for Webpack + Pug';
+  - var pageClass = 'index-page';
+
+block content
+  section
+    .slide
+      .wrap
+        form.left
+          .header
+            span Записаться на сервис
+          .body
+            input(type="text" placeholder="Ваше имя" required)
+            input(type="text" placeholder="Ваш телефон" required)
+            input(type="submit" value="Отправить")
+        .right
+          img(src="/assets/img/pages/index/logo.png")
+          h1 Комплексный ремонт и  диагностика автомобилей в Минске  

@@ -1,0 +1,48 @@
+@font-face
+	font-family: 'Lato'
+	font-style: normal
+	font-weight: 400
+	src: local('Lato'), local('Roboto-Regular'), url('/assets/fonts/Lato-Regular.woff2') format('woff2')
+	font-display: swap
+
+@font-face
+	font-family: 'Lato'
+	font-style: normal
+	font-weight: 500
+	src: local('Lato Medium'), local('Lato-Medium'), url('/assets/fonts/Lato-Medium.woff2') format('woff2')
+	font-display: swap
+
+/*@font-face
+	font-family: 'Lato'
+	font-style: normal
+	font-weight: 700
+	src: local('Lato Bold'), local('Lato-Bold'), url('/assets/fonts/Lato-Bold.woff2') format('woff2')
+	font-display: block*/
+
+html
+  box-sizing: border-box
+*, *:before, *:after
+  box-sizing: inherit
+
+body
+	margin: 0
+	padding: 0
+	font-family: "Lato", "Lucida Grande", Tahoma, Sans-Serif
+	background: linear-gradient(#f2ece8 0%, #e2e8de 100%)
+	background-repeat: no-repeat
+ul
+	margin: 0
+	padding: 0
+	list-style: none
+.indent
+	text-indent: 1rem  	
+
+.wrap
+	width: 1140px
+	margin: 0 auto
+	@media(max-width: 1140px)
+		width: 100%
+a
+	text-decoration: none
+
+$green1: #E2E8DE	

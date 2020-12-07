@@ -1,0 +1,113 @@
+header
+	.row.one
+		background-color: #F1ECE8
+		ul
+			display: flex
+			justify-content: space-between
+			padding: 1rem 0
+			li
+				img
+					vertical-align: middle
+					margin-right: 1rem
+				&.phone a
+					color: #707070
+					font-weight: bold
+	.row.two
+		background-color: #fff
+		.wrap
+			display: flex
+			justify-content: space-between
+			align-items: center
+		ul.zero
+			display: flex
+			justify-content: space-between
+			flex-grow: 1
+		img.logo
+			margin-right: 112px
+			padding-top: 7px
+		a
+			color: #333
+			padding: 0.8rem 1rem
+			&:hover
+				background-color: $green1
+		li.models
+			position: relative
+			&:after
+				content: url(/assets/img/layout/header/triangle.svg)
+				position: absolute
+				top: 25%
+				transform: rotate(180deg)
+			&:hover
+				&:after
+					transform: rotate(0deg)
+					top: -25%
+				ul.one
+					display: block	
+
+			ul.one
+				position: absolute
+				top: 30px
+				border: 1px solid #EFEFEF
+				width: 150px
+				display: none
+				background-color: #fff
+				a
+					display: inline-block
+					width: 100%
+					padding-left: 1.5rem
+				li
+					position: relative
+					&:before
+						content: url(/assets/img/layout/header/triangle.svg)
+						transform: rotate(-90deg)
+						position: absolute
+						top: 14px
+					&:hover
+						ul.two
+							display: block	
+			ul.two
+				display: none
+				border: 1px solid #EFEFEF
+				position: absolute
+				left: -150px
+				width: 150px			
+				top: 0
+				background-color: #fff
+				li
+					&:hover
+						ul.three
+							display: block
+			ul.three
+				display: none
+				border: 1px solid #EFEFEF
+				position: absolute
+				left: -150px
+				width: 150px			
+				top: 0
+				background-color: #fff
+				li
+					&:before
+						content: ''
+
+body
+	&.index-page
+		h1
+			color: #C3E5E9
+			font-size: 54px
+			text-transform: uppercase
+		.slide
+			background-image: url(/assets/img/pages/index/slide.jpg)
+			min-height: 90vh
+			background-size: cover
+			background-repeat: no-repeat
+			display: grid
+			align-items: center
+			.wrap
+				display: flex
+				justify-content: space-between
+				align-items: center
+				.right
+					width: 444px
+					text-align: center
+
+
