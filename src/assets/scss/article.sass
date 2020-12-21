@@ -1,10 +1,20 @@
 header
 	.row.one
 		background-color: #F1ECE8
+		@media(max-width: 615px)
+			display: none
 		ul
 			display: flex
 			justify-content: space-between
 			padding: 1rem 0
+			@media(max-width: 1140px)
+				padding: 1rem
+			@media(max-width: 1020px)
+				.time
+					display: none
+			@media(max-width: 820px)
+				.signup
+					display: none
 			li
 				img
 					vertical-align: middle
@@ -19,14 +29,22 @@ header
 			justify-content: space-between
 			align-items: center
 			height: 50px
+		.mtel	
+			display: none
+			@media(max-width: 615px)
+				display: block
 		ul.zero
 			display: flex
 			justify-content: space-between
 			flex-grow: 1
 			margin-top: -1px
+			@media(max-width: 1020px)
+				display: none
 		img.logo
 			margin-right: 112px
-			//padding-top: 7px
+			@media(max-width: 1140px)
+				margin: 0 1rem
+				margin-right: 2rem
 		a
 			color: #333
 			padding: 15px 1rem
@@ -90,6 +108,56 @@ header
 				li
 					&:before
 						content: ''
+footer
+	font-size: 15px
+	background: linear-gradient(#286d74 0%, #014e55 100%)
+	a
+		color: #fff
+		&:hover
+			color: #FFC400
+	p
+		color: #fff
+		&.cred
+			opacity: 0.65
+			font-size: 13px
+	ul
+		li
+			line-height: 28px
+			color: #fff
+
+	.wrap
+		padding-top: 33px
+		.row
+			display: flex
+			justify-content: space-between
+			align-items: top
+			@media(max-width: 1140px)
+				padding: 0 1rem
+			@media(max-width: 820px)	
+				flex-wrap: wrap
+			@media(max-width: 615px)	
+				flex-direction: column
+				.col
+					margin: 1rem 0
+			.logo
+				li
+					opacity: 0.65
+			.addr
+				.callback
+					color: #F2ECE8
+					border-radius: 5px
+					border: 1px solid #F2ECE8
+					padding: 5px 1rem
+					margin: 0.7rem 0
+					cursor: pointer
+					transition: background 0.3s ease-in-out
+					display: inline-block
+					&:hover
+						background: #F2ECE8
+						color: $green
+			ul.col
+				.mail
+					font-weight: 500	
 
 body
 	&.index-page
@@ -108,9 +176,22 @@ body
 				display: flex
 				justify-content: space-between
 				align-items: center
+				@media(max-width: 1140px)
+					padding: 0 1rem
+				@media(max-width: 820px)	
+					flex-wrap: wrap
+					flex-direction: column-reverse
+					.right
+						text-align: center !important
+						h1
+							font-size: 43px
+							@media(max-width: 480px)
+								font-size: 2rem
 				.right
 					width: 444px
 					text-align: center
+					@media(max-width: 950px)
+						text-align: right
 				form.left
 					width: 330px
 					.header
@@ -165,14 +246,108 @@ body
 							img
 								margin-right: 1rem	
 		.wrap.content
+			h2.y
+				color: $green
+				font-size: 43px
+				position: relative
+				@media(max-width: 735px)
+					text-align: center
+					&:after
+						left: 50%
+						transform: translateX(-50%)
+				&:after
+					content: url(/assets/img/pages/index/y.svg)
+					position: absolute
+					bottom: -2rem
+					left: 0
+			p.bold
+				font-size: 20px
+				@media(max-width: 735px)
+					text-align: center		
 			.about, .eight, .models, .map
 				display: flex
+				justify-content: space-between
 				.left
 					width: 356px
+					@media(max-width: 950px)
+						width: 0
+						display: none
 				.right
 					flex-grow: 1
-					width: 100%
+					width: 784px
+					@media(max-width: 1140px)
+						padding-right: 1rem
+					@media(max-width: 950px)
+						width: 100%
+						padding: 0 1rem
 
-
+			.about
+				align-items: center
+				margin-bottom: 3rem
+				.desc
+					border-radius: 5px
+					background: #fff
+					border: 1px solid rgba(40, 109, 116, 0.6)
+					padding: 37px
+					color: #444444
+					p
+						line-height: 19px
+			.eight
+				.tenets
+					display: flex
+					flex-wrap: wrap
+					justify-content: space-between
+					@media(max-width: 735px)
+						justify-content: center
+					.item
+						width: 344px
+						display: flex
+						align-items: center
+						img
+							margin-right: 27px
+						.d
+							p.y
+								color: $green
+								position: relative
+								margin-bottom: 1rem
+								font-weight: bold
+								font-size: 20px
+								&:before
+									content: url(/assets/img/pages/index/py.svg)
+									position: absolute
+									left: 25%
+									bottom: -1rem		
+			.models
+				.logos
+					display: flex
+					justify-content: space-between
+					align-items: center
+					margin-top: 60px
+					@media(max-width: 700px)
+						flex-wrap: wrap
+					a
+						border: 1px solid #99C4C8
+						border-radius: 5px
+						display: flex
+						align-items: center
+						justify-content: center
+						width: 90px
+						height: 70px
+						transition: background 0.3s ease-in-out
+						margin-bottom: 1rem
+						&:hover
+							background: #99C4C8
+			.map
+				margin: 3rem 0
+				@media(max-width: 700px)
+					margin: 3rem 0
+				.head
+					background: #fff
+					display: flex
+					align-items: center
+					justify-content: space-between
+					padding: 0 1rem
+					border-top-left-radius: 5px			
+					border-top-right-radius: 5px			
 
 
