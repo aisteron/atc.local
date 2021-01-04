@@ -33,6 +33,11 @@ header
 			display: none
 			@media(max-width: 615px)
 				display: block
+				width: 177px
+				font-weight: bold
+				padding: 1rem 0
+				@media(max-width: 370px)
+					font-size: 14px
 		ul.zero
 			display: flex
 			justify-content: space-between
@@ -45,11 +50,14 @@ header
 			@media(max-width: 1140px)
 				margin: 0 1rem
 				margin-right: 2rem
+			@media(max-width: 444px)
+				transform: scale(0.8)
+				margin: 0
 		a
 			color: #333
 			padding: 15px 1rem
 			&:hover
-				background-color: $green1
+				background-color: $green-de
 		li.models
 			position: relative
 			&:after
@@ -154,7 +162,7 @@ footer
 					display: inline-block
 					&:hover
 						background: #F2ECE8
-						color: $green
+						color: $green-74
 			ul.col
 				.mail
 					font-weight: 500	
@@ -192,10 +200,20 @@ body
 					text-align: center
 					@media(max-width: 950px)
 						text-align: right
+					@media(max-width: 615px)
+						width: 100%
+						img.logo
+							transform: scale(0.8)
+						h1
+							font-size: 32px	
 				form.left
 					width: 330px
+					@media(max-width: 386px)
+						width: 90%
+						.header
+							padding: 1rem
 					.header
-						background-color: $green
+						background-color: $green-74
 						padding: 11px 55px 11px 67px
 						border-radius: 5px 5px 0 0
 						span
@@ -237,7 +255,7 @@ body
 							border: 1px solid #99C4C8
 							cursor: pointer
 							transition: background .4s ease-in-out
-							color: $green
+							color: $green-74
 							font-weight: 500
 							display: flex
 							align-items: center
@@ -247,11 +265,12 @@ body
 								margin-right: 1rem	
 		.wrap.content
 			h2.y
-				color: $green
+				color: $green-74
 				font-size: 43px
 				position: relative
 				@media(max-width: 735px)
 					text-align: center
+					//word-break: break-all
 					&:after
 						left: 50%
 						transform: translateX(-50%)
@@ -290,8 +309,10 @@ body
 					border: 1px solid rgba(40, 109, 116, 0.6)
 					padding: 37px
 					color: #444444
+					@media(max-width: 414px)
+						padding: 1rem
 					p
-						line-height: 19px
+						line-height: 19px	
 			.eight
 				.tenets
 					display: flex
@@ -307,7 +328,7 @@ body
 							margin-right: 27px
 						.d
 							p.y
-								color: $green
+								color: $green-74
 								position: relative
 								margin-bottom: 1rem
 								font-weight: bold
