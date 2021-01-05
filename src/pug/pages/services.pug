@@ -1,0 +1,14 @@
+extends ../layout/index
+
+block variables
+  - var title = 'Услуги';
+  - var description = 'Description for Webpack + Pug';
+  - var pageClass = 'services-page marble';
+
+
+block content
+  section
+    .wrap
+      include ../includes/layout/aside
+      include ../includes/pages/services/content
+    

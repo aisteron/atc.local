@@ -1,0 +1,71 @@
+aside
+	.tabs
+		ul.header
+			li Ремонт
+			li.active Диагностика
+			li Модели
+		.body
+			.repair(data-index="0")
+				ul
+					li
+						a(href="#") Выхлопная система
+					li
+						a(href="#") Двигатель
+					li
+						a(href="#") Рулевое управление
+					li
+						a(href="#") Тормозная система
+					li
+						a(href="#") Система зажигания
+					li
+						a(href="#") Сцепление
+					li
+						a(href="#") Электрика
+					li
+						a(href="#") Система охлаждения
+					li
+						a(href="#") Система подачи воздуха
+			.diag.open(data-index="1")
+				ul.common
+					li
+						a(href="#") Комплексная
+					li
+						a(href="#") Компьютерная
+					li
+						a(href="#") Перед покупкой
+
+				label Диагностика систем автомобиля
+
+				ul.particularly
+					li
+						a(href="#")
+							img.lazyload(data-src="/assets/img/layout/aside/2.svg" width="37" height="31")
+							span Двигатель
+					li
+						a(href="#")
+							img.lazyload(data-src="/assets/img/layout/aside/6.svg" width="38" height="43")
+							span Подвеска и ходовая
+					li
+						a(href="#")
+							img.lazyload(data-src="/assets/img/layout/aside/13.svg" width="38" height="19")
+							span Трансмиссия
+			.models(data-index="2")
+				ul
+					li
+						a(href="#")
+							img.lazyload(data-src="/assets/img/layout/aside/models/01.svg" width="38" height="37")
+							span Mercedes	
+					li
+						a(href="#")
+							img.lazyload(data-src="/assets/img/layout/aside/models/02.svg" width="38" height="38")
+							span BMW	
+					li
+						a(href="#")
+							img.lazyload(data-src="/assets/img/layout/aside/models/03.svg" width="38" height="38")
+							span Skoda	
+					li
+						a(href="#")
+							img.lazyload(data-src="/assets/img/layout/aside/models/04.svg" width="37" height="25")
+							span Toyota	
+
+
