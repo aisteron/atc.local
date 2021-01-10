@@ -1,5 +1,7 @@
 section .wrap > aside
 	width: 356px
+	@media(max-width: 1140px)
+		margin-left: 1rem
 	.tabs
 		
 		background: #fff
@@ -18,7 +20,7 @@ section .wrap > aside
 			justify-content: space-between
 			border-bottom: 1px solid #7EA7AB
 			li
-				padding: 15px 19px 11px 20px
+				padding: 15px 19px 11px 19px
 				cursor: pointer
 				&.active
 					background: $green-74
@@ -32,7 +34,7 @@ section .wrap > aside
 				display: none
 				&.open
 					display: block
-			.repair ul, .diag ul.common 
+			.repair ul, .diag ul.common, .models ul 
 					li
 						a
 							padding: 1rem 40px
@@ -63,7 +65,14 @@ section .wrap > aside
 								background: $green-de
 							img
 								margin-right: 1rem
-	
+			.models
+				ul
+					li
+						a
+							display: flex
+							align-items: center
+							img
+								margin-right: 1rem
 	a.car
 		background: #fff
 		border: 1px solid rgba(40, 109, 116, 0.6)							

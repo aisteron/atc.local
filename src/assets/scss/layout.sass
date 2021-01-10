@@ -17,10 +17,18 @@
   src: url('/assets/fonts/lato-bold.eot')
   src: local("Lato Bold"), local("Lato-Bold"), url('/assets/fonts/lato-bold.eot?#iefix') format("embedded-opentype"), url('/assets/fonts/lato-bold.woff2') format("woff2"), url('/assets/fonts/lato-bold.woff') format("woff"), url('/assets/fonts/lato-bold.ttf') format("truetype"), url('/assets/fonts/lato-bold.svg#lato') format("svg")
   font-weight: 700
-  font-style: normal  
+  font-style: normal
+
+@font-face
+  font-family: 'Lato'
+  src: url('/assets/fonts/lato-black.eot')
+  src: local("Lato Black"), local("Lato-Black"), url('/assets/fonts/lato-black.eot?#iefix') format("embedded-opentype"), url('/assets/fonts/lato-black.woff2') format("woff2"), url('/assets/fonts/lato-black.woff') format("woff"), url('/assets/fonts/lato-black.ttf') format("truetype"), url('/assets/fonts/lato-black.svg#lato') format("svg")
+  font-weight: 900
+  font-style: normal    
 
 html
   box-sizing: border-box
+  scroll-behavior: smooth
 *, *:before, *:after
   box-sizing: inherit
 
@@ -51,6 +59,8 @@ a
 $green-74: #286D74 // $green
 $green-de: #E2E8DE // $green1
 $green-c8: #99C4C8
+$yellow: #FFC400
+$bs: 0 3px 6px #71920e33, 0 3px 6px #64730617
 
 body.marble
   &:after
@@ -65,11 +75,13 @@ body.marble
     background: url(/assets/img/layout/130.jpg)
     opacity: 0.5
     z-index: -1
+    background-repeat: repeat
   section
     .wrap
       margin-top: 36px
       display: flex
-      //justify-content: space-between
       article
         flex-grow: 1
         margin-left: 33px
+        @media(max-width: 600px)
+          margin-left: 1rem

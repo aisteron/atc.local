@@ -1,0 +1,15 @@
+extends ../layout/service-list
+
+block variables
+  - var title = 'Список услуг ремонта';
+  - var description = 'Description for Webpack + Pug';
+  - var pageClass = 'service-list-page marble';
+
+
+block content
+  section
+    .wrap
+      include ../includes/layout/aside
+      include ../includes/pages/service-list/content
+      //include ../includes/pages/service-list/mobile.content.pug
+    

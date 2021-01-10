@@ -36,4 +36,30 @@ nav.bread
 				&:after
 					content: ""
 				a
-					color: #989898	
+					color: #989898
+span.button.search
+	background: #C3E5E9
+	border: 1px solid rgba(153, 196, 200, 0.24)
+	border-radius: 5px
+	font-size: 13px
+	font-weight: 600
+	color: $green-74
+	height: 36px
+	display: flex
+	align-items: center
+	justify-content: space-around
+	width: 102px
+	cursor: pointer
+	transition: background 0.3s ease-in-out
+	&:hover
+		background: darken(#C3E5E9, 5%)
+
+@-webkit-keyframes rotating
+  from
+    -webkit-transform: rotate(0deg)
+
+  to
+    -webkit-transform: rotate(360deg)
+
+.spin
+  -webkit-animation: rotating 2s linear infinite

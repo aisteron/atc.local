@@ -47,3 +47,18 @@ export async function loadAssets(js,css) {
 
 		return 'assets loaded'
 }
+
+export function snack(text){
+	if(!$_('#snackbar')){
+		let div = document.createElement('div')
+			div.setAttribute('id', 'snackbar')
+			$_('.scripts-area').appendChild(div)
+	}
+
+	$_('#snackbar').innerText = text
+	$_('#snackbar').classList.add('show')
+
+	setTimeout(()=>{$_('#snackbar').classList.remove('show')}, 2000)
+
+
+}

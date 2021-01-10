@@ -1,3 +1,97 @@
 article
 	include ../../layout/bread.pug
-	p 2
+	h1 Услуги по ремонту авто в Минске
+	//ul.nav
+		li
+			a(href="#r") Ремонт
+		li
+			a(href="#d") Диагностика
+		li
+			a(href="#o") Прочие
+
+	.msearch.mobile.white
+		.row
+			input(type="text" placeholder="Модель (кириллица)")
+			span.button.search
+				img.lazyload(data-src="/assets/img/pages/services/loupe.svg" width="18" height="18")
+				span Найти
+				//img.spin(src="/assets/img/pages/services/loading.svg")
+		.res
+			ul
+				//li.model(data-id="0")
+					a(href="#")
+						span.pagetitle Модель 1
+						span.year 1992 - 1997
+				//li.model(data-id="0")
+					a(href="#")
+						span.pagetitle Модель 2
+						span.year 1997 - 2000
+						
+	.group
+		h2#r Ремонт
+		.items
+			a.item(href="/service-list.html")
+				img.lazyload(data-src="/assets/img/pages/services/2.svg" width="70" height="58")
+				span Двигатель
+			a.item(href="/service-list.html")
+				img.lazyload(data-src="/assets/img/pages/services/1.svg" width="76" height="22")
+				span Выхлопная система
+			a.item(href="/service-list.html")
+				img.lazyload(data-src="/assets/img/pages/services/2.svg" width="70" height="58")
+				span Тормозная система
+			a.item(href="/service-list.html")
+				img.lazyload(data-src="/assets/img/pages/services/1.svg" width="76" height="22")
+				span Рулевое управление
+
+	//.group
+		h2#d Диагностика
+		.items
+			a.item(href="#")
+				img.lazyload(data-src="/assets/img/pages/services/2.svg" width="70" height="58")
+				span Двигатель
+			a.item(href="#")
+				img.lazyload(data-src="/assets/img/pages/services/1.svg" width="76" height="22")
+				span Выхлопная система
+
+	//.group
+		h2#o Прочие
+		.items
+			a.item(href="#")
+				img.lazyload(data-src="/assets/img/pages/services/2.svg" width="70" height="58")
+				span Подбор запчастей
+			a.item(href="#")
+				img.lazyload(data-src="/assets/img/pages/services/1.svg" width="76" height="22")
+				span Услуги эвакуатора
+	//.msearch.desktop
+		h2 Выберите модель
+		.wrapper
+			form
+				input(list="models" placeholder="Поиск модели")
+				datalist#models
+					option(value="Toyota" data-id="15")
+					option(value="Lexus" data-id="16")
+					option(value="Mercedes" data-id="43")
+				ul.res
+					//li
+						a(href="#") Avensis
+					//li
+						a(href="#") Camry
+					//li
+						a(href="#") RAV4
+			.wrapper.ares
+				ul.ares
+					li
+						a(href="#")
+							span.gen I
+							span.year 1999 - 2005		
+					li
+						a(href="#")
+							span.gen I Рестайлинг
+							span.year 2005 - 2010		
+					li
+						a(href="#")
+							span.gen II
+							span.year 2010 - 2015			
+				span.close &times;
+						
+
