@@ -760,6 +760,141 @@ body
 				position: absolute
 				right: 1rem
 				bottom: -5px
+		#related
+			background: #fff
+			border-radius: 5px
+			border: 1px solid #DBDBDB
+			padding: 33px
+			margin-bottom: 1rem
+			padding-bottom: 0
+			h3
+				font-size: 25px
+				font-weight: 900
+				color: #333
+				margin-top: 0
+			.list
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-between
+				a
+					color: #707070
+					font-size: 18px
+					font-weight: 900
+					&:hover
+						color: $green-74
+				.item
+					display: flex
+					align-items: center
+					margin-bottom: 2rem
+					img
+						border-radius: 50%
+						margin-right: 1rem
+					.dsc
+						width: 190px
+						span.price
+							display: block
+							margin-top: 10px
+							color: #707070
+							font-size: 15px
+		#features
+			background: #fff
+			border-radius: 5px
+			border: 1px solid #DBDBDB
+			margin: 1rem 0
+			position: relative
+			padding: 33px
+			&:after
+				content: url(/assets/img/pages/service/meh2.jpg)
+				position: absolute
+				right: 1rem
+				bottom: -5px
+			h3
+				font-size: 25px
+				font-weight: 900
+				color: #333
+				margin-top: 0
+				margin-bottom: 2rem
+			.list
+				display: flex
+				.item
+					width: 125px
+					height: 100px
+					display: flex
+					flex-direction: column
+					justify-content: space-between
+					align-items: center
+					text-align: center
+					margin-right: 2rem
+					span
+						display: block
+						font-size: 14px
+						color: #707070
+		#reviews
+			display: flex
+			border-radius: 5px
+			border: 1px solid #DBDBDB
+			margin-bottom: 1rem
+			.left
+				background: #F2ECE8
+				width: 308px
+				min-width: 308px
+				text-align: center
+				padding: 2rem
+				border-top-left-radius: 5px
+				border-bottom-left-radius: 5px
+				img
+					display: inline-block
+				h3
+					font-size: 25px
+					font-weight: 900
+					color: #333
+				p
+					cursor: pointer
+
+					img
+						vertical-align: top
+					span
+						color: #707070
+						margin-left: 10px
+						&:hover
+							color: $green-74	
+			.right
+				background: #fff
+				padding: 30px 25px
+				border-top-right-radius: 5px
+				border-bottom-right-radius: 5px
+				.row
+					display: flex
+					span
+						&.author
+							color: $green-74
+							margin-right: 1rem
+						&.date
+							color: #C1C1C1
+							font-size: 14px	
+					.arrows
+						text-align: right
+						flex-grow: 1
+						svg
+							width: 6px
+							height: 13px
+							cursor: pointer
+							path
+								transition: fill 0.3s ease-in-out
+							&.active
+								path
+									fill: $green-74
+							&.prev
+								transform: rotate(-180deg)
+								margin-right: 26px
+							&:hover
+								path
+									fill: $yellow
+							&.disabled
+								path
+									fill: $green-de
+
+
 
 
 
