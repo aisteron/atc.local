@@ -7,6 +7,7 @@ export function review() {
 
 	expand() // развернуть комментарий
 	show_form()
+	load_reviews()
 
 }
 
@@ -96,4 +97,33 @@ function draw(text){
 
 	string += '</div>';
 	$_('#reviews form').innerHTML = string
+}
+
+/*
+
+{
+   "1":{
+      "date":"05.02.2021",
+      "name":"Алена",
+      "text":"Подскажите где есть все-все возможные значения полей migx inputTV, на migx документации не нашел такого поля как например:"
+   },
+   "2":{
+      "date":"06.02.2021",
+      "name":"Zena",
+      "text":"Заготовка для конфигурации MIGX находится в директории /core/components/MIGX/examples/. В нижеследующем примере мы будем использовать заготовку "
+   }
+}
+
+*/
+
+function load_reviews(){
+
+	let host = ''
+	window.location.host == 'autoceh.by' ? '' : host = 'http://atc.modx'
+	
+	fetch(host+'/php/reviews')
+	 .then(r => r.json())
+	 .then(j => console.log(j))
+		
+	 
 }
