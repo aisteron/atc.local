@@ -67,9 +67,18 @@ article
 		.left
 			img.lazyload(data-src="/assets/img/pages/service/favorite.svg" width="52" height="44")
 			h3 Отзывы наших клиентов
-			p
+			p.open.pen
 				img.lazyload(data-src="/assets/img/pages/service/pen.svg" width="15" height="15")
 				span Написать отзыв
+			form
+				input(type="text" required placeholder="Ваше имя")
+				textarea(placeholder="Текст отзыва" required)
+				span.close &times;
+				.row
+					button.reject Отмена
+					button.submit(type="submit")
+						img.lazyload(data-src="/assets/img/layout/forms/plane.svg")
+						span Отправить	
 		.right
 			.row
 				span.author Елена М.

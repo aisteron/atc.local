@@ -4,8 +4,8 @@ import {expand} from './expand';
 
 export function Ui() {
 	msearch() // поиск по модели
-	mobileSearch() // поиск по модели в мобильном
-	expand() // разворачивание списка родительских услуг 
+	mobileSearch() // поиск по модели в мобильном https://prnt.sc/wnk9dg
+	expand() // разворачивание списка родительских услуг  https://prnt.sc/wnk4m8
 }
 
 
