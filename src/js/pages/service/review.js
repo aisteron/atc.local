@@ -5,9 +5,12 @@ export function review() {
 
 	if(!$_('#reviews')) return;
 
+
+
 	expand() // развернуть комментарий
 	show_form()
 	load_reviews()
+
 
 }
 
@@ -99,31 +102,73 @@ function draw(text){
 	$_('#reviews form').innerHTML = string
 }
 
-/*
 
-{
-   "1":{
-      "date":"05.02.2021",
-      "name":"Алена",
-      "text":"Подскажите где есть все-все возможные значения полей migx inputTV, на migx документации не нашел такого поля как например:"
-   },
-   "2":{
-      "date":"06.02.2021",
-      "name":"Zena",
-      "text":"Заготовка для конфигурации MIGX находится в директории /core/components/MIGX/examples/. В нижеследующем примере мы будем использовать заготовку "
-   }
-}
-
-*/
-
-function load_reviews(){
+function load_reviews(obj){
 
 	let host = ''
 	window.location.host == 'autoceh.by' ? '' : host = 'http://atc.modx'
 	
 	fetch(host+'/php/reviews')
 	 .then(r => r.json())
-	 .then(j => console.log(j))
+	 .then(j => slide(j))
 		
-	 
+
+}
+
+function slide(obj){
+	let index = 0
+
+
+	$$_('#reviews .arrows svg').forEach(el => {
+		el.addEventListener('click', event => {
+
+			if(event.target.classList.contains('disabled')) return;
+
+			if(event.target.classList.contains('prev')){
+				drawC(-1)
+			} else {
+				drawC(1)
+			}
+		})
+	})
+
+	function drawC(index){
+		
+		let current = Number($_('#reviews .right').dataset.index)
+		current = current + index
+		
+		if(current < 0) return;
+
+		$_('#reviews .right').setAttribute('data-index', current)
+
+
+
+
+
+		
+
+		Object.keys(obj).forEach((el, i) => {
+			if(i == current){
+				$_('#reviews .date').innerText = obj[el].date
+				$_('#reviews .author').innerText = obj[el].name
+				$_('#reviews .body .item').innerText = obj[el].text
+			}
+		})
+
+
+		// arrows
+		if(current == 0){
+			$_('svg.prev').classList.add('disabled')
+		} else {
+			$_('svg.prev').classList.remove('disabled')
+		}
+
+		if(Object.keys(obj).length <= (current +1) ){
+			$_('svg.next').classList.add('disabled')
+		} else {
+			$_('svg.next').classList.remove('disabled')
+		}
+
+		
+	}
 }

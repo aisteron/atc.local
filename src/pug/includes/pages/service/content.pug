@@ -63,7 +63,7 @@ article
 			.item
 				img.lazyload(data-src="/assets/img/pages/service/shield.svg" width="44" height="51")
 				span Гарантия на все виды работ
-	#reviews.lazyload
+	#reviews
 		.left
 			img.lazyload(data-src="/assets/img/pages/service/favorite.svg" width="52" height="44")
 			h3 Отзывы наших клиентов
@@ -79,14 +79,14 @@ article
 					button.submit(type="submit")
 						img.lazyload(data-src="/assets/img/layout/forms/plane.svg")
 						span Отправить	
-		.right
+		.right(data-index="0")
 			.row
 				span.author Елена М.
 				span.date 05.02.2021
 				.arrows
 					svg.prev.disabled(viewBox="0 0 6 13")
 						path(d="M6 6.5L0 13V0z")
-					svg.active(viewBox="0 0 6 13")
+					svg.next.active(viewBox="0 0 6 13")
 						path(d="M6 6.5L0 13V0z")
 			.body
 				.item
@@ -95,7 +95,11 @@ article
 				.expand
 					span Развернуть
 					img.lazyload(data-src="/assets/img/pages/service/0.svg" width="13" height="6")
-
+	#map
+		.head
+			p.bold Мы находимся
+			p г. Минск, ул. Козлова, 22
+		iframe.lazyload(data-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2350.562368927103!2d27.592893!3d53.903982!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaf844984d4297df1!2z0JDQstGC0L7RgdC10YDQstC40YEgItCQ0LLRgtC-0KbQtdGFIg!5e0!3m2!1sru!2sby!4v1606501542006!5m2!1sru!2sby" width="100%" height="240" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0")
 
 						
 
