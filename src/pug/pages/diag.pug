@@ -1,0 +1,12 @@
+extends ../layout/diag
+
+block variables
+  - var title = 'Диагностика';
+  - var description = 'Description for Webpack + Pug';
+  - var pageClass = 'diag-page marble';
+
+block content
+  section
+    .wrap
+      include ../includes/layout/aside
+      include ../includes/pages/diag/content
