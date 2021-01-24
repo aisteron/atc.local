@@ -1,0 +1,42 @@
+article
+	include ../../layout/bread.pug
+	#intro
+		.img(style="background-image: url(/assets/img/pages/evac/intro.jpg)")
+		h1 Услуги эвакуатора в Минске
+
+		.row
+			.item
+				img.lazyload(data-src="/assets/img/pages/service/wallet.svg" width="33" height="27")
+				.dsc
+					span.one Стоимость
+					span.two от 50 р.
+
+			.item.order
+				img.lazyload(data-src="/assets/img/pages/service/calendar.svg" width="37" height="34")
+				.dsc
+					span.one Заказать
+					span.two услугу
+		.wrapper
+			.cont
+				p <b>Эвакуация автомобиля в автосервис - дёшево, быстро, с гарантией</b>
+				p Для того, чтобы ваш автомобиль уже в течение 30 минут забрал эвакуатор, вам нужно связаться с нами по телефону и сообщить, где вы находитесь и какой транспорт нужно забрать.
+			img(src="/assets/img/pages/evac/01.jpg" style="width: 100%")
+
+	.widget.evac
+		h3 Заказать эвакуатор бесплатно *
+		p.h3 в наш автосервис
+		img.lazyload(data-src="/assets/img/pages/evac/02.png" width="456" height="200")
+		p * при заказе услуг на сумму <b>не менее 300 р.</b>
+
+		form
+			input(type="text" placeholder="Ваш телефон"  required)
+			button.submit(type="submit")
+				img.lazyload(data-src="/assets/img/layout/forms/plane.svg")
+				span Отправить
+		.borders
+			img.top-left(src="/assets/img/pages/evac/top-left.svg")
+			img.top-right(src="/assets/img/pages/evac/top-right.svg")
+			img.bottom-left(src="/assets/img/pages/evac/bottom-left.svg")
+			img.bottom-right(src="/assets/img/pages/evac/bottom-right.svg")
+
+

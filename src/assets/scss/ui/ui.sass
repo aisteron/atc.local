@@ -63,16 +63,23 @@ span.button.search
 	transition: background 0.3s ease-in-out
 	&:hover
 		background: darken(#C3E5E9, 5%)
+.spin
+  -webkit-animation: rotating 2s linear infinite
 
 @-webkit-keyframes rotating
   from
     -webkit-transform: rotate(0deg)
-
   to
     -webkit-transform: rotate(360deg)
-.spin
-  -webkit-animation: rotating 2s linear infinite
-
+.box
+	background: #fff
+	border: 1px solid #DBDBDB
+	border-radius: 5px
+	padding: 33px
+	@media(max-width: 500px)
+		border-radius: 0
+		padding: 1rem
+		margin: 1rem -1rem	
 #map
 	margin: 3rem 0
 	.head
@@ -84,50 +91,249 @@ span.button.search
 		border-top-left-radius: 5px			
 		border-top-right-radius: 5px	
 		flex-wrap: wrap	 
-
-
 #intro
-			background: #fff
-			border: 1px solid #DBDBDB
+	background: #fff
+	border: 1px solid #DBDBDB
+	border-radius: 5px
+	padding: 30px 33px
+	margin-top: 30px
+	@media(max-width: 500px)
+		border-radius: 0
+		margin: 0 -1rem
+		margin-top: 2rem
+		padding: 1rem
+		h1
+			font-size: 25px
+	.img
+		height: 197px
+		background-position: center center
+		border-top-left-radius: 5px
+		border-top-right-radius: 5px
+		margin: -30px -33px
+		margin-bottom: 30px
+	.row
+		display: flex
+		flex-wrap: wrap
+		.item
+			margin-right: 76px
+			display: flex
+			align-items: center
+			padding: 1rem
+			transition: background 0.3s ease-in-out
 			border-radius: 5px
-			padding: 30px 33px
-			margin-top: 30px
-			.img
-				height: 197px
-				background-position: center center
-				border-top-left-radius: 5px
-				border-top-right-radius: 5px
-				margin: -30px -33px
-				margin-bottom: 30px
+			img
+				margin-right: 18px
+			.dsc
+				span
+					display: block
+					&.one
+						font-size: 15px
+						color: #707070
+					&.two
+						color: $green-74
+						font-weight: 900
+			&.order
+				cursor: pointer
+				&:hover
+					background: $green-de
+	.cont
+		color: #707070
+		margin-top: 40px
+		b
+			font-weight: 700
+		p
+			line-height: 21px				
+#features
+	margin: 1rem 0
+	position: relative
+	@media(max-width: 500px)
+		margin: 1rem -1rem
+		.list
+			width: 64%
+			.item
+				span
+					text-align: left
+	&:after
+		content: url(/assets/img/pages/service/meh2.jpg)
+		position: absolute
+		right: 1rem
+		bottom: -5px
+	h3
+		font-size: 25px
+		font-weight: 900
+		color: #333
+		margin-top: 0
+		margin-bottom: 2rem
+	.list
+		display: flex
+		@media(max-width: 700px)
+			flex-direction: column
+			.item
+				flex-direction: row
+				height: auto
+				width: auto
+				justify-content: normal
+				img
+					width: 16px
+					margin-right: 1rem
+		.item
+			width: 125px
+			height: 100px
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			align-items: center
+			text-align: center
+			margin-right: 2rem
+			span
+				display: block
+				font-size: 14px
+				color: #707070					
+#rating
+	padding-bottom: 1rem
+	margin-bottom: 1rem
+	.items
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+		.item
+			width: 180px
+			margin-bottom: 1rem
+			p
+				font-size: 15px
+				color: #707070
+				margin-bottom: 0
 			.row
 				display: flex
+				align-items: center
+				//justify-content: center
+				img
+					margin-right: 1rem
+				span
+					font-size: 25px
+					font-weight: 900						
+.widget
+	&.evac
+		background: #99C4C8
+		width: 524px
+		position: relative
+		padding-top: 37px
+		padding-left: 33px
+		padding-right: 33px
+		padding-bottom: 20px
+		margin: 1rem 0
+		@media(max-width: 680px)
+			width: 100%
+			img.lazyloaded
+				width: 100%
+				height: auto
+		.borders
+			.top-left
+				position: absolute
+				top: -3px 
+				left: -3px
+			.top-right
+				position: absolute
+				top: -3px 
+				right: -3px
+			.bottom-left
+				position: absolute
+				bottom: -3px 
+				left: -3px
+			.bottom-right
+				position: absolute
+				right: -3px 
+				bottom: -3px
+		h3
+			font-size: 25px
+			font-weight: 900
+		p.h3
+			color: $green-74
+			font-size: 18px
+			font-weight: 900
+		form
+			display: flex
+			@media(max-width: 440px)
 				flex-wrap: wrap
-				.item
-					margin-right: 76px
-					display: flex
-					align-items: center
-					padding: 1rem
-					transition: background 0.3s ease-in-out
-					border-radius: 5px
-					img
-						margin-right: 18px
-					.dsc
-						span
-							display: block
-							&.one
-								font-size: 15px
-								color: #707070
-							&.two
-								color: $green-74
-								font-weight: 900
-					&.order
-						cursor: pointer
-						&:hover
-							background: $green-de
-			.cont
-				color: #707070
-				margin-top: 40px
-				b
-					font-weight: 700
-				p
-					line-height: 21px				
+				input
+					margin-bottom: 1rem
+					padding-bottom: 7px
+			input
+				background: transparent
+				border: none
+				border-bottom: 1px solid $green-74
+				flex-grow: 1
+				margin-right: 1rem
+				&:focus
+					outline: none
+					background: $green-de
+				&::placeholder
+					color: $green-74
+					font-family: "Lato", sans-serif
+					font-size: 18px
+			button
+				background: #fff		
+#certs
+	h3
+		font-size: 25px
+		font-weight: 900
+		font-size: #333
+	.list
+		display: flex
+		@media(max-width: 600px)
+			overflow-y: scroll
+			width: 90vw
+		img
+			margin-right: 1rem	
+
+.msearch.mobile
+	margin-right: 1rem
+	&.white
+		background: #fff
+		border-radius: 5px
+		padding: 1rem
+		padding-bottom: 0
+		border: 1px solid #DBDBDB
+		.res
+			background: none
+			border: 0
+	@media(max-width: 400px)
+		//margin-left: -1rem
+	.row
+		display: flex
+		justify-content: space-between
+		input
+			border: none
+			border-bottom: 1px solid #DBDBDB
+			background: transparent
+			font-size: 15px
+			font-family: "Lato", sans-serif
+			&:focus
+				outline: none
+				background: $green-de
+	.res
+		background: #fff
+		border-radius: 5px
+		border: 1px solid #DBDBDB
+		margin: 1rem 0
+		display: none
+		&.open
+			display: block
+		ul
+			li
+				line-height: 39px
+				padding:  10px
+				&:hover
+					background: $green-de
+				&.model
+					line-height: 130%
+				a
+					span
+						display: block
+						&.pagetitle
+							color: #333
+							font-size: 16px
+						&.year
+							font-size: 14px
+							color: $green-74			

@@ -1,0 +1,14 @@
+extends ../layout/typo
+
+block variables
+  - var title = 'Типографика';
+  - var description = 'Description for Webpack + Pug';
+  - var pageClass = 'typo-page marble';
+
+
+block content
+  section
+    .wrap
+      include ../includes/layout/aside
+      include ../includes/pages/typo/content
+    

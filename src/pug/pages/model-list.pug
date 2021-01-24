@@ -1,0 +1,15 @@
+extends ../layout/model-list
+
+block variables
+  - var title = 'Список моделей';
+  - var description = 'Description for Webpack + Pug';
+  - var pageClass = 'model-list-page marble';
+
+
+block content
+  section
+    .wrap
+      include ../includes/layout/aside
+      include ../includes/pages/model-list/content
+
+    

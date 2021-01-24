@@ -1,0 +1,12 @@
+extends ../layout/evac
+
+block variables
+  - var title = 'Эвакуатор';
+  - var description = 'Description for Webpack + Pug';
+  - var pageClass = 'evac-page marble';
+
+block content
+  section
+    .wrap
+      include ../includes/layout/aside
+      include ../includes/pages/evac/content

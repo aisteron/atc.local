@@ -47,7 +47,7 @@ function draw(json){
 	<img src="/assets/img/pages/services/loupe.svg">
 	<span>Найти</span>
 	`
-
+	$_('.msearch.mobile .res').classList.add('open')
 	$$_('.msearch.mobile .res ul li').forEach(el => {
 		el.addEventListener('click', req)
 	})

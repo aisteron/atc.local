@@ -1,0 +1,18 @@
+block variables
+
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title #{title}
+    meta(name="description", content=description)
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=0")
+    link(rel="preload" href="/vendors/lazysizes.min.js" as="script")
+    script(src="/vendors/lazysizes.min.js") 
+    block head
+
+  body(class=pageClass)
+    .wrapper
+      include ../includes/layout/header
+      block content
+      include ../includes/layout/footer 

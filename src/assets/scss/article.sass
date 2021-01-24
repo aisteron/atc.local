@@ -357,6 +357,12 @@ body
 					border-top-right-radius: 5px	
 					flex-wrap: wrap		
 	&.marble
+		@media(max-width: 1000px)
+			aside
+					display: none
+			article		
+					margin-left: 1rem !important
+					margin-right: 1rem		
 		h1
 			font-size: 43px
 			font-weight: 900
@@ -366,9 +372,6 @@ body
 			@media(max-width: 400px)
 				font-size: 30px
 	&.services-page
-		aside
-			@media(max-width: 760px)
-				display: none
 		article
 			ul.nav
 				li
@@ -501,57 +504,8 @@ body
 							display: block
 						&:hover
 							color: #FFC400
-			.msearch.mobile
-				margin-right: 1rem
-				&.white
-					background: #fff
-					border-radius: 5px
-					padding: 1rem
-					padding-bottom: 0
-					border: 1px solid #DBDBDB
-					.res
-						background: none
-						border: none
-				@media(max-width: 400px)
-					margin-left: -1rem
-				.row
-					display: flex
-					justify-content: space-between
-					input
-						border: none
-						border-bottom: 1px solid #DBDBDB
-						background: transparent
-						font-size: 15px
-						font-family: "Lato", sans-serif
-						&:focus
-							outline: none
-							background: $green-de
-				.res
-					background: #fff
-					border-radius: 5px
-					border: 1px solid #DBDBDB
-					margin: 1rem 0
-					ul
-						li
-							line-height: 39px
-							padding:  10px
-							&:hover
-								background: $green-de
-							&.model
-								line-height: 130%
-							a
-								span
-									display: block
-									&.pagetitle
-										color: #333
-										font-size: 16px
-									&.year
-										font-size: 14px
-										color: $green-74
+	
 	&.service-list-page
-		aside
-			@media(max-width: 1000px)
-				display: none
 		.desktop.items
 			.item
 				background: #fff
@@ -694,31 +648,29 @@ body
 							span
 								margin: 0 1rem
 								display: block
-	&.service-page
-		
+	&.service-page	
 		#symptom
-			background: #fff
-			border-radius: 5px
-			border: 1px solid #DBDBDB
-			margin: 1rem 0
 			position: relative
-			padding: 33px
+			margin: 1rem 0
 			h3
 				font-size: 25px
 				font-weight: 900
 				color: #333
+				margin-top: 0
 			ul
-				color: #707070	
+				color: #707070
+				list-style-position: inside	
+				li
+					line-height: 27px
+					list-style-type: circle
 			&:after
 				content: url(/assets/img/pages/service/meh.jpg)
 				position: absolute
 				right: 1rem
 				bottom: -5px
+				@media(max-width: 670px)
+					content: ''
 		#related
-			background: #fff
-			border-radius: 5px
-			border: 1px solid #DBDBDB
-			padding: 33px
 			margin-bottom: 1rem
 			padding-bottom: 0
 			h3
@@ -745,49 +697,23 @@ body
 						margin-right: 1rem
 					.dsc
 						width: 190px
+						@media(max-width: 400px)
+							width: auto
+
 						span.price
 							display: block
 							margin-top: 10px
 							color: #707070
 							font-size: 15px
-		#features
-			background: #fff
-			border-radius: 5px
-			border: 1px solid #DBDBDB
-			margin: 1rem 0
-			position: relative
-			padding: 33px
-			&:after
-				content: url(/assets/img/pages/service/meh2.jpg)
-				position: absolute
-				right: 1rem
-				bottom: -5px
-			h3
-				font-size: 25px
-				font-weight: 900
-				color: #333
-				margin-top: 0
-				margin-bottom: 2rem
-			.list
-				display: flex
-				.item
-					width: 125px
-					height: 100px
-					display: flex
-					flex-direction: column
-					justify-content: space-between
-					align-items: center
-					text-align: center
-					margin-right: 2rem
-					span
-						display: block
-						font-size: 14px
-						color: #707070
 		#reviews
 			display: flex
 			border-radius: 5px
 			border: 1px solid #DBDBDB
 			margin-bottom: 1rem
+			@media(max-width: 670px)
+				flex-direction: column
+				.left
+					width: auto
 			.left
 				background: #F2ECE8
 				width: 308px
@@ -915,6 +841,177 @@ body
 							color: $green-74
 							&:hover
 								text-decoration: underline
+	&.diag-page
+		@media(max-width: 1000px)
+			#intro	
+				.cont
+					margin-top: 1rem
+
+		@media(max-width: 500px)
+			h1
+				font-size: 25px
+			#intro
+				.row
+					.item
+						padding-left: 0					
+			.price
+				background: #fff
+				border: 1px solid #DBDBDB
+				border-radius: 5px
+				padding: 33px
+				margin: 1rem 0
+				@media(max-width: 500px)
+					table
+						tr
+							td:nth-of-type(3)
+								display: none
+				h3
+					margin-top: 0
+					font-weight: 900
+					font-size: 25px
+					color: #333
+				p
+					color: #707070
+					font-size: 15px
+					line-height: 21px
+				table
+					border-collapse: collapse
+					width: 100%
+					thead
+						background: #F2ECE8
+						tr
+							td
+								padding: 13px
+					tbody
+						tr
+							&:nth-of-type(2n)
+								background: $green-de
+							td
+								padding: 1rem
+								&:nth-of-type(2)
+									text-align: center
+
+								a
+									color: #333
+									&:hover
+										color: $green-74
+										text-decoration: underline
+								span.order
+									padding: 1rem
+									cursor: pointer
+									transition: background 0.3s ease-in-out
+									&:hover
+										background: $green-74
+										color: $green-de
+	&.evac-page
+		#intro
+			.wrapper
+				display: flex
+				align-items: center
+				img
+					margin-left: 2rem
+				@media(max-width: 680px)
+					flex-wrap: wrap
+					img
+						margin-left: 0
+	&.model-list-page
+		.mlist
+			background: #fff
+			border-radius: 5px
+			border: 1px solid rgba(40, 109, 116, 0.6)
+			display: flex
+			align-items: center
+			@media(max-width: 500px)
+				margin: 1rem -1rem
+				border-radius: 0
+				a
+					padding: 15px 15px
+			a
+				padding: 15px 30px
+				display: inline-block
+				&:hover
+					background: $green-de
+		.car-list
+			.item
+				display: flex
+				background: #fff
+				border-radius: 5px	
+				border: 1px solid #DBDBDB
+				margin-bottom: 1rem
+				@media(max-width: 680px)
+					flex-direction: column
+					>img
+						display: none
+				@media(max-width: 370px)
+					>img
+						display: block
+						width: 100%
+						border-radius: 0
+						border-top-left-radius: 5px
+						border-top-right-radius: 5px
+						height: auto
+					.dsc
+						ul
+							width: 100%
+							padding-right: 1rem
+				>img
+					border-top-left-radius: 5px
+					border-bottom-left-radius: 5px
+				.dsc
+					padding-left: 26px
+					position: relative
+					width: 100%
+					@media(max-width: 680px)
+						padding-left: 0
+						ul
+							padding-left: 26px
+						h3
+							padding-left: 26px	
+							padding-right: 26px
+							line-height: 30px	
+					>a
+						color: $green-74
+					ul
+						width: 80%
+						margin-top: 2rem
+						li
+							display: flex
+							justify-content: space-between
+							line-height: 22px
+							color: #707070
+							a
+								color: #707070
+								&:hover
+									color: $green-74
+									text-decoration: underline
+
+					.row
+						background: #C3E5E9
+						position: absolute
+						bottom: 0
+						width: 100%
+						margin-left: -26px
+						padding: 6px
+						text-align: right
+						padding-right: 1rem
+						@media(max-width: 680px)
+							position: relative
+							margin-left: 0
+							margin-top: 1rem
+						a
+							color: $green-74
+							font-size: 18px
+							font-weight: 600
+							&:hover
+								text-decoration: underline
+							img
+								vertical-align: text-bottom
+								margin-right: 1rem
+
+
+
+
+
 
 
 
