@@ -1,0 +1,97 @@
+article
+	include ../../layout/bread.pug
+	h1 Ремонт автомобилей Мерседес в Минске
+	img.m.lazyload(data-src="/assets/img/pages/vendor/01.png")
+	#spec.box.mb16
+		h3 Специализированный сервис <span>Мерседес<span>
+		p Мы ремонтируем <span>Мерседес<span> с 2003 года!
+		.list
+			.item
+				img.lazyload(data-src="/assets/img/pages/vendor/01.svg")
+				p Дилерское качество работ
+			.item
+				img.lazyload(data-src="/assets/img/pages/vendor/02.svg")
+				p Сохраняем заводскую гарантию
+			.item
+				img.lazyload(data-src="/assets/img/pages/vendor/03.svg")
+				p Отдаем автомобиль вовремя
+		button.reject Получить консультацию
+	.msearch.desktop.mb16
+		h2 Выберите модель
+		.wrapper
+			form
+				input(list="models" placeholder="Поиск модели")
+				datalist#models
+					option(value="Toyota" data-id="15")
+					option(value="Lexus" data-id="16")
+					option(value="Mercedes" data-id="43")
+				ul.res
+					//li
+						a(href="#") Avensis
+					//li
+						a(href="#") Camry
+					//li
+						a(href="#") RAV4
+			.wrapper.ares
+				ul.ares
+					li
+						a(href="#")
+							span.gen I
+							span.year 1999 - 2005		
+					li
+						a(href="#")
+							span.gen I Рестайлинг
+							span.year 2005 - 2010		
+					li
+						a(href="#")
+							span.gen II
+							span.year 2010 - 2015			
+				span.close &times;	
+
+					
+					
+	.car-list
+		.item
+			img.lazyload(data-src="/assets/img/pages/model-list/01.jpg" width="320" height="204")
+			.dsc
+				a(href="#")
+					h3 Toyota Avensis I Рестайлинг 2000 - 2003
+				ul
+					li
+						a(href="#") Ремонт подвески
+						span - от 950 р.
+					li
+						a(href="#") Ремонт двигателя
+						span - от 950 р.
+					li
+						a(href="#") Ремонт топливной системы
+						span - от 300 р.
+				.row
+					a(href="#")
+						img.lazyload(src="/assets/img/pages/model-list/ext.svg" width="22" height="19")
+						span Подробнее
+		.item
+			img.lazyload(data-src="/assets/img/pages/model-list/02.jpg" width="320" height="204")
+			.dsc
+				a(href="#")
+					h3 BMW 6 серии, купе, E63, II рест 07`-10`
+				ul
+					li
+						a(href="#") Ремонт подвески
+						span - от 950 р.
+					li
+						a(href="#") Ремонт двигателя
+						span - от 950 р.
+					li
+						a(href="#") Ремонт топливной системы
+						span - от 300 р.
+				.row
+					a(href="#")
+						img.lazyload(src="/assets/img/pages/model-list/ext.svg" width="22" height="19")
+						span Подробнее				
+	.cont
+		h3 Когда проходить техобслуживание Мерседес Бенц?
+		p Сложная электронная система управления объединена единым контроллером (Controller Area Network) для компьютерной диагностики. Аппаратура для контроля систем авто оснащена ПО, способным за несколько минут выявить поломки в любом блоке автомобиля.
+		p Производитель советует проходить ТО не реже 1 раза в год или через каждые 10-15 тыс. км пробега - зависит от типа двигателя. При техобслуживании выполняются:			
+		ul
+			li проверка уровней жидкостей, масла		

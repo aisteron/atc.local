@@ -1,0 +1,12 @@
+extends ../layout/vendor
+
+block variables
+  - var title = 'Производитель';
+  - var description = 'Description for Webpack + Pug';
+  - var pageClass = 'vendor-page marble';
+
+block content
+  section
+    .wrap
+      include ../includes/layout/aside
+      include ../includes/pages/vendor/content
