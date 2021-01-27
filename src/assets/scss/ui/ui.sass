@@ -527,4 +527,26 @@ span.button.search
 						text-decoration: underline
 					img
 						vertical-align: text-bottom
-						margin-right: 1rem									
+						margin-right: 1rem
+
+table.def
+	border-collapse: collapse
+	width: 100%
+	td
+		padding: 10px 1rem		
+		&:nth-of-type(2)
+			text-align: center
+
+	thead
+		background: #F2ECE8
+	tbody
+		tr
+			&:nth-of-type(2n)
+				background: $green-de
+			td
+				&:last-of-type
+					cursor: pointer
+					transition: background-color 0.3s ease-in-out
+					&:hover
+						background-color: darken($green-de	, 3%)
+

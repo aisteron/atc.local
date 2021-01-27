@@ -1,7 +1,7 @@
 extends ../layout/model
 
 block variables
-  - var title = 'Список услуг ремонта';
+  - var title = 'Модель авто';
   - var description = 'Description for Webpack + Pug';
   - var pageClass = 'model-page marble';
 
@@ -10,6 +10,5 @@ block content
   section
     .wrap
       include ../includes/layout/aside
-      //include ../includes/pages/model/content
-      include ../includes/pages/model/mobile.content.pug
+      include ../includes/pages/model/content.pug
     
