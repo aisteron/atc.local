@@ -867,8 +867,18 @@ body
 		.imgwrap
 			position: relative
 			border-radius: 5px
+			@media(max-width: 520px)
+				border-radius: 0
+				margin-left: -1rem
+				margin-right: -1rem
+				img
+					border-radius: 0
 			img
 				border-radius: 5px
+				@media(max-width: 1000px)
+					width: 100%
+
+
 			&:after
 				content: ""
 				width: 100%
@@ -887,6 +897,12 @@ body
 				justify-content: space-between
 				align-items: flex-end
 				padding: 0 33px
+				@media(max-width: 520px)
+					flex-direction: column
+					top: -5rem
+					.year
+						margin-bottom: 1rem
+
 				.year
 					font-size: 25px
 					font-weight: 900
