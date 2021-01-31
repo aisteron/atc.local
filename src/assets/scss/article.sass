@@ -864,6 +864,11 @@ body
 				width: 100%
 				height: auto
 	&.model-page
+		#model-intro
+			position: relative
+			@media(max-width: 520px)
+				h1
+					margin-bottom: 1rem
 		.imgwrap
 			position: relative
 			border-radius: 5px
@@ -888,6 +893,8 @@ body
 				bottom: 0
 				left: 0
 				border-radius: 5px
+				@media(max-width: 520px)
+					border-radius: 0
 		article
 			.row
 				position: relative
@@ -899,10 +906,13 @@ body
 				padding: 0 33px
 				@media(max-width: 520px)
 					flex-direction: column
-					top: -5rem
+					align-items: end
+					top: 11rem
+					position: absolute
+					padding-left: 0
 					.year
 						margin-bottom: 1rem
-
+						font-size: 18px	
 				.year
 					font-size: 25px
 					font-weight: 900
@@ -936,7 +946,14 @@ body
 					li
 						line-height: 22px
 						a
-							color: #707070					
+							color: #707070
+				@media(max-width: 520px)
+					table.def
+						tr
+							td:nth-of-type(3)
+								display: none	
+							td:nth-of-type(2)
+								text-align: right
 
 
 

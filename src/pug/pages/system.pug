@@ -1,0 +1,14 @@
+extends ../layout/system
+
+block variables
+  - var title = 'Модель - Система';
+  - var description = 'Description for Webpack + Pug';
+  - var pageClass = 'system-page marble';
+
+
+block content
+  section
+    .wrap
+      include ../includes/layout/aside
+      include ../includes/pages/system/content
+    

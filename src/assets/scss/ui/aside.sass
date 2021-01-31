@@ -164,6 +164,34 @@ section .wrap > aside
 							text-decoration: underline	
 			thead
 				background: #F2ECE8
+	.model
+		background: #fff
+		border: 1px solid rgba(40, 109, 116, 0.64)
+		border-radius: 5px
+		padding: 1rem
+
+		h3
+			font-size: 25px
+			font-weight: 900
+		a
+			color: #333
+			&:hover
+				text-decoration: underline
+				color: $green-74
+		&.toyota
+			background: #fff
+			background-image: url(/assets/img/layout/aside/t.jpg)
+			background-position: 100% 50%
+			background-repeat: no-repeat
+			
+		ul
+			columns: 2	
+			li
+				line-height: 21px
+				&:before
+					content: '•'
+					color: $green-74
+					padding-right: 1rem
 
 
 
