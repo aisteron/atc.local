@@ -43,6 +43,9 @@ section .wrap > aside
 							transition: background 0.3s ease-in-out
 							&:hover
 								background: $green-de
+						&.active
+							a
+								background: $green-de		
 			.diag
 				label
 					font-size: 14px
@@ -148,6 +151,7 @@ section .wrap > aside
 			padding: 10px
 		table
 			border-collapse: collapse
+			width: 100%
 			tr
 				&:nth-of-type(2)
 					background: $green-de
