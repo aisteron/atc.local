@@ -532,6 +532,17 @@ span.button.search
 table.def
 	border-collapse: collapse
 	width: 100%
+	@media(max-width: 500px)
+		tr
+			td:nth-of-type(3)
+				display: none
+			td:nth-of-type(2)
+				text-align: right	
+	a
+		color: #333
+		&:hover
+			color: $green-74
+			text-decoration: underline
 	td
 		padding: 10px 1rem		
 		&:nth-of-type(2)
@@ -550,3 +561,12 @@ table.def
 					&:hover
 						background-color: darken($green-de	, 3%)
 
+#myModal
+	.modal-content
+		padding: 1rem
+		text-align: center
+	form
+		input
+			display: block
+			margin: 1rem auto
+			padding: 5px

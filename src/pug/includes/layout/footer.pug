@@ -47,8 +47,14 @@ footer
 		.row
 			p.cred Обращаем Ваше внимание на то, что вся представленная на сайте информация носит информационный характер и не является публичной офертой. 			
 
-
-		
+#myModal.modal
+	.modal-content
+		span.close ×
+		h3 Оставьте свой номер телефона и менеджер вам перезвонит
+		form
+			input(type="text" required placeholder="Ваше имя")
+			input(type="text" required placeholder="Ваш телефон")
+			button(type="submit" value="Отправить") Отправить
 #mobile-menu
 	.header
 		span.callback

@@ -1,0 +1,12 @@
+extends ../layout/duty
+
+block variables
+  - var title = 'Служебные страницы';
+  - var description = 'Description for Webpack + Pug';
+  - var pageClass = 'duty-page marble';
+
+block content
+  section
+    .wrap
+      include ../includes/layout/aside
+      include ../includes/pages/duty/content
