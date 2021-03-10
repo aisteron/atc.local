@@ -5,23 +5,37 @@ header
 			display: none
 		ul
 			display: flex
-			justify-content: space-between
+			//justify-content: space-between
+			align-items: center
 			padding: 1rem 0
 			@media(max-width: 1140px)
 				padding: 1rem
-			@media(max-width: 1020px)
-				.time
-					display: none
-			@media(max-width: 820px)
-				.signup
-					display: none
+
 			li
 				img
 					vertical-align: middle
 					margin-right: 1rem
-				&.phone a
-					color: #707070
-					font-weight: bold
+				&.addr
+					flex-grow: 1
+				&.soc
+					margin-right: 1rem
+					@media(max-width: 850px)
+						display: none
+					a.tg
+						margin: 0 5px		
+				&.phone
+					a
+						display: flex
+						align-items: center
+						color: #707070
+						font-weight: bold
+						&.a1
+							margin: 0 30px
+						&.mts
+							@media(max-width: 700px)
+								display: none
+							span
+								padding-top: 2px
 	.row.two
 		background-color: #fff
 		.wrap
