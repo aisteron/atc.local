@@ -17,6 +17,10 @@ header
 					margin-right: 1rem
 				&.addr
 					flex-grow: 1
+					span
+						cursor: pointer
+						&:hover
+							text-decoration: underline
 				&.soc
 					margin-right: 1rem
 					@media(max-width: 850px)
@@ -185,6 +189,39 @@ footer
 			ul.col
 				.mail
 					font-weight: 500	
+#map_popup
+	.black
+		background: #00000073
+		width: 100vw
+		height: 100vh
+		position: absolute
+		top: 0
+		left: 0
+		display: none
+		&.open
+			display: block
+		.content
+			width: 600px
+			height: 350px
+			margin: 5rem auto
+			position: relative
+			@media(max-width: 720px)
+				width: 80%
+				margin: 1rem
+				margin-top: 3rem
+			span.notice
+				color: #fff
+				font-size: 20px
+			span.close
+				position: absolute
+				top: -1rem
+				right: -2rem
+				color: #fff
+				font-size: 30px
+				cursor: pointer	
+				&:hover
+					color: red
+
 body
 	&.index-page
 		h1
