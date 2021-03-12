@@ -52,7 +52,7 @@ function show_form() {
 	$_('#reviews form').addEventListener('submit', event => {
 		event.preventDefault();
 		let host = ''
-		window.location.host == 'autoceh.by' ? '' : host = 'http://atc.modx'
+		(window.location.host == 'autoceh.by' || window.location.host == 'new.autoceh.by') ? '' : host = 'http://atc.modx'
 
 		let data = {
 			name: $_('#reviews form input').value,
