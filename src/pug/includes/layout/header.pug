@@ -20,11 +20,17 @@ header
 					a.mts(href="tel:+375333715050")
 						img(src="/assets/img/layout/header/mts.png" width="18" height="18")
 						span +375 (33) 371-50-50
+				li#nav-icon1
+					span
+					span
+					span
 
 	.row.two
 		.wrap
 			a(href="/")
-				img.logo(src="/assets/img/layout/header/logo.svg")
+				picture
+					source(srcset="/assets/img/layout/header/key.svg" media="(max-width: 615px)")
+					img.logo(src="/assets/img/layout/header/logo.svg")
 			ul.zero
 				li
 					a(href="#") Ремонт
@@ -43,8 +49,19 @@ header
 					a(href="#") О нас
 				li
 					a(href="#") Контакты
-			a.mtel(href="tel:+375293715050") +375 (29) 371-50-50
-			#nav-icon1
-				span
-				span
-				span
+			.mtel
+				.phone
+					a.a1(href="tel:+375293715050")
+						img(src="/assets/img/layout/header/a2.png")
+					a.mts(href="tel:+375333715050")
+						img(src="/assets/img/layout/header/mts.png" width="18" height="18")
+					a(href="tel:+375293715050") 371-50-50
+				.soc
+					a.viber(href="viber://chat/?number=%2B375293715050" title="Написать в вайбер")
+						img(src="/assets/img/layout/header/viber.svg" width="18" height="20")
+					a.tg(href="tg://resolve?domain=Autoceh" title="Написать в телеграм")
+						img(src="/assets/img/layout/header/tg.svg" width="19" height="16")
+					a.in(href="https://www.instagram.com/autoceh.by/" target="_blank")
+						img(src="/assets/img/layout/header/in.svg" width="19" height="19")
+						
+

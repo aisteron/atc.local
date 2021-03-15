@@ -17,5 +17,3 @@ function intro(){
 	if(!$_('#model-intro')) return
 		$_('#model-intro .signup').addEventListener('click', _ => $_('#myModal').style.display = 'block')
 }
-
-// system page ?
