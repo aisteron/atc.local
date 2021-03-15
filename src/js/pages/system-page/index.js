@@ -6,7 +6,7 @@ export function systemPage(){
 }
 
 function intro(){
-	$$_('#system-intro .dsc')[1].addEventListener('click', event =>{
+	$$_('#system-intro .dsc').addEventListener('click', event =>{
 		$_('#myModal').style.display = 'block'
 	})
 
