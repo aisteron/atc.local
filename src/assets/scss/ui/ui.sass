@@ -570,3 +570,141 @@ table.def
 			display: block
 			margin: 1rem auto
 			padding: 5px
+
+
+#reviews
+	display: flex
+	border-radius: 5px
+	border: 1px solid #DBDBDB
+	margin-bottom: 1rem
+	@media(max-width: 670px)
+		flex-direction: column
+		.left
+			width: auto
+	.left
+		background: #F2ECE8
+		width: 308px
+		min-width: 308px
+		text-align: center
+		padding: 2rem
+		border-top-left-radius: 5px
+		border-bottom-left-radius: 5px
+		img
+			display: inline-block
+		h3
+			font-size: 25px
+			font-weight: 900
+			color: #333
+		p.pen
+			cursor: pointer
+			display: none
+			img
+				vertical-align: top
+			span
+				color: #707070
+				margin-left: 10px
+				&:hover
+					color: $green-74
+		form
+			margin: 0 -1rem
+			position: relative
+			display: none
+			.response
+				p
+					font-weight: 900
+					font-size: 17px
+			span.close
+				position: absolute
+				top: 67px
+				right: 9px
+				font-size: 22px
+				color: #C0D5CF
+				cursor: pointer
+				&:hover
+					color: $yellow
+			input[type="text"]
+				border-radius: 5px
+				border: 1px solid #DBDBDB
+				padding: 14px 17px
+				margin-bottom: 1rem
+				width: 100%
+				font-family: 'Lato', sans-serif
+				&:focus
+					outline: none
+					background: lighten($green-de, 5%)
+			textarea
+				font-family: 'Lato', sans-serif
+				width: 100%
+				border-radius: 5px
+				border: 1px solid #DBDBDB
+				padding: 1rem
+				margin-bottom: 1rem
+				&:focus
+					outline: none
+					background: lighten($green-de, 5%)
+			.row
+				display: flex
+				justify-content: space-between				
+	.right
+		background: #fff
+		padding: 30px 25px
+		border-top-right-radius: 5px
+		border-bottom-right-radius: 5px
+		.row
+			display: flex
+			span
+				&.author
+					color: $green-74
+					margin-right: 1rem
+				&.date
+					color: #C1C1C1
+					font-size: 14px	
+			.arrows
+				text-align: right
+				flex-grow: 1
+				svg
+					width: 6px
+					height: 13px
+					cursor: pointer
+					path
+						transition: fill 0.3s ease-in-out
+						pointer-events: none
+					&.active
+						path
+							fill: $green-74
+					&.prev
+						transform: rotate(-180deg)
+						margin-right: 26px
+					&:hover
+						path
+							fill: $yellow
+					&.disabled
+						path
+							fill: $green-de
+		.body
+			.item
+				margin-top: 42px
+				height: 110px
+				overflow-y: hidden
+				&.open
+					height: auto
+					& + .expand img
+						transform: rotate(180deg)
+				p
+					line-height: 22px
+					color: #5E5E5E
+			.expand
+				text-align: right
+				background: linear-gradient(0deg, rgba(255,255,255,1) 31%, rgba(255,255,255,0) 100%)
+				position: relative
+				margin-top: -23px
+				height: 40px
+				cursor: pointer
+				span
+					margin-top: 2rem
+					display: inline-block
+					margin-right: 10px
+					font-size: 14px
+					color: $green-74
+					&:hover
+						text-decoration: underline
