@@ -251,13 +251,15 @@ body
 			font-size: 54px
 			text-transform: uppercase
 		.slide
-			background-image: url(/assets/img/pages/index/slide.jpg)
+			//background-image: url(/assets/img/pages/index/slide.jpg)
 			min-height: 90vh
 			background-size: cover
 			background-repeat: no-repeat
 			display: grid
 			align-items: center
 			padding-bottom: 1rem
+			@media(max-width: 615px)
+				background-position: 40%
 			.wrap
 				display: flex
 				justify-content: space-between

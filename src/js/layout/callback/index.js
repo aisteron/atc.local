@@ -100,8 +100,8 @@ function header_modal(){
 
 function send(el, obj, color){
 	let url = ``
-	process.env.NODE_ENV == 'development' ? url = "http://atc.modx/assets/php/callback.php" : "/assets/php/callback.php"
-	fetch(url, {
+	//process.env.NODE_ENV == 'development' ? url = "http://atc.modx/assets/php/callback.php" : "/assets/php/callback.php"
+	fetch("/assets/php/callback.php", {
 		method: "POST",
 		mode: 'cors',
 		headers: {'Content-type': 'application/json'},
