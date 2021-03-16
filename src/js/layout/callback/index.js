@@ -62,6 +62,10 @@ function footer_modal(){
 		$_('#myModal').style.display = 'none'
 	})
 
+	document.addEventListener('keydown', event => {
+		$_('#myModal').style.display = 'none'
+	})
+
 	$_('#myModal form').addEventListener('submit', event => {
 		event.preventDefault()
 		let obj = {
