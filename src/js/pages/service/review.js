@@ -87,7 +87,7 @@ function draw(text){
 	
 
 
-	if(text == 'ok') {
+	if(text == 'success') {
 		string += `
 			<img src="/assets/img/layout/forms/check.svg">
 			<p>Успешно отправлено 😇</p>
