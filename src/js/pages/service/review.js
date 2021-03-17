@@ -51,8 +51,8 @@ function show_form() {
 	// отправка
 	$_('#reviews form').addEventListener('submit', event => {
 		event.preventDefault();
-		let host = ''
-		(window.location.host == 'autoceh.by' || window.location.host == 'new.autoceh.by') ? '' : host = 'http://atc.modx'
+		//let host = ''
+		//(window.location.host == 'autoceh.by' || window.location.host == 'new.autoceh.by') ? '' : host = 'http://atc.modx'
 
 		let data = {
 			name: $_('#reviews form input').value,
@@ -66,7 +66,7 @@ function show_form() {
 			`
 		}
 		
-		fetch(host + '/assets/php/send.php', {
+		fetch('/assets/php/send.php', {
 			method: 'POST',
 			mode: 'cors',
 			headers: {'Content-type': 'Application/json'},
@@ -82,21 +82,25 @@ function show_form() {
 }
 
 function draw(text){
+
 	let string = '<div class="response">'
 	
-	if(text == 'error'){
+
+
+	if(text == 'ok') {
+		string += `
+			<img src="/assets/img/layout/forms/check.svg">
+			<p>Успешно отправлено 😇</p>
+		`
+	} else {
 		snack('Произошла ошибка отправки на сервере')
 		string += `
 
 			<img src="/assets/img/layout/forms/warning.svg">
 			<p>Ошибка отправки 😐</p>
-		` 
-	} else {
-		string += `
-			<img src="/assets/img/layout/forms/check.svg">
-			<p>Успешно отправлено 😇</p>
 		`
-	} 
+		return;
+	}
 
 	string += '</div>';
 	$_('#reviews form').innerHTML = string
